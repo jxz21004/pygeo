@@ -1,14 +1,14 @@
 # Standard Python modules
+from collections import OrderedDict
 import copy
 import os
 import shutil
 import unittest
-from collections import OrderedDict
 
 # External modules
+from baseclasses import BaseRegTest
 import commonUtils
 import numpy as np
-from baseclasses import BaseRegTest
 from pyspline import Curve
 from stl import mesh
 
