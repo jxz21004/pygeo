@@ -12,7 +12,6 @@ from baseclasses import BaseRegTest
 from pyspline import Curve
 from stl import mesh
 
-
 # First party modules
 from pygeo import DVConstraints, DVGeometry
 
