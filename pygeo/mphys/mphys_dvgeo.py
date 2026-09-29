@@ -753,17 +753,17 @@ class OM_DVGEOCOMP(om.ExplicitComponent):
         projected=False,
     ):
         thicknessCon = self.DVCon.addThicknessConstraints2D(
-                leList,
-                teList,
-                nSpan,
-                nChord,
-                name=name,
-                scaled=scaled,
-                addToPyOpt=addToPyOpt,
-                surfaceName=surfaceName,
-                DVGeoName=DVGeoName,
-                compNames=compNames,
-                projected=projected,
+            leList,
+            teList,
+            nSpan,
+            nChord,
+            name=name,
+            scaled=scaled,
+            addToPyOpt=addToPyOpt,
+            surfaceName=surfaceName,
+            DVGeoName=DVGeoName,
+            compNames=compNames,
+            projected=projected,
         )
         nCon = thicknessCon.nCon
         self.add_output(name, distributed=False, val=np.ones(nCon), shape=nCon)
