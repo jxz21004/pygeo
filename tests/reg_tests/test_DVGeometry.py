@@ -1,15 +1,17 @@
 # Standard Python modules
-from collections import OrderedDict
 import copy
 import os
 import shutil
 import unittest
+from collections import OrderedDict
 
 # External modules
-from baseclasses import BaseRegTest
 import commonUtils
 import numpy as np
+from baseclasses import BaseRegTest
+from pyspline import Curve
 from stl import mesh
+
 
 # First party modules
 from pygeo import DVConstraints, DVGeometry
@@ -1499,7 +1501,6 @@ class RegTestPyGeo(unittest.TestCase):
             np.testing.assert_array_equal(shimValues[key], directValues[key])
 
     def test_explicit_ref_axis_rot_type_8(self):
-        from pyspline import Curve
         ffdfile = os.path.join(self.base_path, "../../input_files/outerBoxFFD.xyz")
         DVGeo = DVGeometry(ffdfile)
 
