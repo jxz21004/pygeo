@@ -765,7 +765,9 @@ class OM_DVGEOCOMP(om.ExplicitComponent):
             compNames=compNames,
             projected=projected,
         )
-        self.add_output(name, distributed=False, val=np.ones((nSpan * nChord,)), shape=nSpan * nChord)
+        nSpanTotal = int(np.sum(nSpan))
+        nCon = nSpanTotal * nChord
+        self.add_output(name, distributed=False, val=np.ones(nCon), shape=nCon)
 
     def nom_addThicknessConstraints1D(
         self,
